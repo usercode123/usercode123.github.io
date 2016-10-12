@@ -1,0 +1,142 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    height: 100%;
+    background: radial-gradient(#fff,#999,#333);
+    overflow: hidden;
+}
+*{
+    box-sizing: border-box;
+}
+#main-box{
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border-radius: 10%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    box-shadow: 1px 1px 5px #85f289;
+}
+#lyric-box{
+    width: 617px;
+    height: 33%;
+    border-bottom: 1px solid black;
+    background: linear-gradient(#ccc,#9ff868);
+    background-size: 100% 100%;
+    padding: 20px;
+    text-align: center;
+    overflow-y: scroll;
+}
+#porgess-box{
+    height: 33%;
+    border-bottom: 1px solid black;
+    background-color: #9ff868;
+}
+#control-box{
+    height: 34%;
+    background: linear-gradient(#9ff868,#9ff869);
+}
+#control-box span{
+    font-size: 81px;
+    cursor: pointer;
+}
+#control-box>div{
+    position: relative;
+    top: 50%;
+    transform: translate(0,-50%);
+    text-align: center;
+}
+#progress{
+    width: calc(100% - 20px);
+    position: relative;
+    top: 30%;
+    transform: translate(0,-50%);
+    left: 10px;
+    cursor: pointer;
+}
+#progress-label{
+    position: relative;
+    top: 30%;
+    text-align: center;
+}
+#lyric-box p{
+    margin: 5px 0;
+    transition: font-size 0.3s linear;
+    cursor: pointer;
+}
+.hight-line{
+    font-size: 1.4rem;
+    color: purple;
+    text-shadow: 0 0 5px skyblue;
+}
+#cd{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-size: 100% 100%;
+    border: 4px solid silver;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transition: left 0.4s linear;
+    animation: round 20s linear infinite;
+   
+}
+#cd:hover{
+    left: calc(50% + 200px);
+}
+@keyframes round{
+    form{
+        transform: rotate(0);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+#hode{
+    margin: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #9a9a9a;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid silver
+}
+#list-box{
+    width: 200px;
+    height: 600px;
+    border: 1px solid #9ff868;
+    border-radius: 10%;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    
+    bottom: 0;
+    margin: auto;
+    background: linear-gradient(#ccc,#9ff868);
+    overflow-y: hidden;
+    list-style: none;
+}
+.play:before{
+    content: '<i class="icon-spinner icon-spin"></i>'
+}
+#list-box li{
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+    
+    
+}
+#list-box li:hover{
+    color: purple;
+    text-shadow: 0 0 5px skyblue;
+}
