@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="wangshun">
+        <title>微信</title>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="shortcut icon" href="/favicon.ico">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" href="sui/css/sm.min.css">
+        <link rel="stylesheet" href="sui/css/sm-extend.min.css">
+        <style>
+            #btn-title{
+                width: 40%;
+                font-size: 0.8rem;
+                margin: 0 auto;
+            }
+            #msg-page,#ab-page,#dl-page{
+                animation: none !important;
+            }
+            #info-panel{
+                background-color: white;
+            }
+            #self-head{
+                height: 3rem;
+                width: 3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="page-group">
+            <!--消息-->
+            <div class="page page-current" id="msg-page">
+                <header class="bar bar-nav">
+                    <a class="icon icon-me pull-left open-panel" href="#" data-panel="#info-panel"></a>
+                    <button class="button pull-right"><b>+</b></button>
+                    <div id="btn-title" class="buttons-row">
+                        <a class="tab-link button active" >消息</a>
+                        <a class="tab-link button" >电话</a>
+                    </div>
+                    
+                </header>
+                <nav class="bar bar-tab">
+                    <a class="tab-item active" >
+                        <span class="icon icon-message"></span>
+                        <span class="tab-label">消息</span>
+                        <span class="badge">99+</span>
+                    </a>
+                    <a class="tab-item" href="#ab-page">
+                        <span class="icon icon-friends"></span>
+                        <span class="tab-label">联系人</span>
+                    </a>
+                    <a class="tab-item" href="#dl-page">
+                        <span class="icon icon-share"></span>
+                        <span class="tab-label">动态</span>
+                    </a>                         
+                </nav>
+                <div class="content close-panel">
+                   <div class="content-block">
+                         这是好友列表
+                   </div>
+                          
+
+
+
+
+                </div>       
+            </div>
+            <!--联系人-->
+            <div class="page" id="ab-page">
+                <header class="bar bar-nav">
+                    <a class="icon icon-me pull-left" href="#"></a>
+
+                    <a class="icon pull-right">添加</a>
+                    <h1 class="title">联系人</h1>
+                    
+                    
+                </header>
+                <nav class="bar bar-tab">
+                    <a class="tab-item" href="#msg-page">
+                        <span class="icon icon-message"></span>
+                        <span class="tab-label">消息</span>
+                    </a>
+                    <a class="tab-item active" >
+                        <span class="icon icon-friends"></span>
+                        <span class="tab-label">联系人</span>
+                    </a>
+                    <a class="tab-item" href="#dl-page">
+                        <span class="icon icon-share"></span>
+                        <span class="tab-label">动态</span>
+                    </a>
+                </nav>
+                <div class="content">
+                    <div class="content-block">
+                    这是联系人列表
+                    </div>
+                   
+                </div>
+            </div>
+            <!--动态-->
+            <div class="page" id="dl-page">
+                <header class="bar bar-nav">
+                    <a class="icon icon-me pull-left" href="#"></a>
+                        <a class="icon pull-right">更多</a>
+                    <h1 class="title">动态</h1>
+                    
+                </header>
+                <nav class="bar bar-tab">
+                    <a class="tab-item" href="#msg-page">
+                        <span class="icon icon-message"></span>
+                        <span class="tab-label">消息</span>
+                    </a>
+                    <a class="tab-item" href="#ab-page">
+                        <span class="icon icon-friends"></span>
+                        <span class="tab-label">联系人</span>
+                    </a>
+                    <a class="tab-item active" >
+                        <span class="icon icon-share"></span>
+                        <span class="tab-label">动态</span>
+                    </a>
+                </nav>
+                <div class="content">
+                    <div class="content-block">
+                        <div class="content-block">
+                        动态
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="panel panel-left panel-reveal" id="info-panel">
+                <div class="content-block">
+                    <div id="self-info">
+                        <img src="img/a.jpg" alt="" id="self-head">
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+            
+            
+        <script type='text/javascript' src='sui/js/zepto.min.js' charset='utf-8'></script>
+        <script type='text/javascript' src='sui/js/sm.min.js' charset='utf-8'></script>
+        <script type='text/javascript' src='sui/js/sm-extend.min.js' charset='utf-8'></script>
+    </body>
+    <script>
+        $(document).on("pageInit","#msg-page",function(e,pageID,$page){
+                document.title = "消息";   
+        })
+         $(document).on("pageInit","#ab-page",function(e,pageID,$page){
+                document.title = "联系人";   
+        })
+         $(document).on("pageInit","#dl-page",function(e,pageID,$page){
+                document.title = "动态";   
+        })
+
+
+        $.init();
+    </script>
+</html>
